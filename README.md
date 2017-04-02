@@ -1,23 +1,32 @@
 Packaging Virtualenv
-============
+====================
+This is a simple example of how we can package a Python 3.5 virtualenv
+containing a simple project `stupidbin` that has external PyPi dependencies inside a single `rpm` file.
 
-Using the package `rpmvenv` we're creating an rpm with a Python 3.5 virtual env, and all code dependencies of our
-example package `stupidbin`
+To do that we use the amazing python package [`rpmvenv`](https://github.com/kevinconway/rpmvenv) 
 
-The whole point here is to demonstrate how we could develop smoothly with python3 without fearing dependencies
-and still have a pretty decent and simple packaging process.
+The whole point here is to demonstrate how we could develop smoothly python3 
+code, without fearing dependencies and still have a pretty decent packaging process.
 
-The only OS dependency is the Python 3.5 itself and the OS must be the same. 
 
-As long as our target machine have the same Python 3.5 the rpm will be installed sucessfully.
+# What we need
 
-Of course, is still a `virtualenv` to use the packages we need to activate the virtualenv, but hey, this is not an issue, this is great because we're not obstructing the host, our code is completly isolated.
+With this approach the resulting `rpm` will be strict dependent to the build environment. 
+
+If we build inside a CentOS 6 with Python 3.5 the only machines able to install it will be exactly CentOS6 with Python 3.5.
+
+Also, the package is still a `virtualenv`. To use it we need to activate the virtualenv, but hey, 
+this is not an issue, this is great because we're installing things in a non intrusive way.
+
+We'e not obstructing the host, our code is completely isolated!
+
 
 # Stupidbin
 
-As the name may employ, Stupid bin is a stupid bin/module. The whole point
-of this package is demonstrate how our dependencies are going to be tied together
-in our rpm. To do that it needs to be a standard python package (setup.py, bin folder)
+As the name may imply, Stupid bin is a stupid bin/module. The whole point of this package 
+is demonstrate how our dependencies are going to be tied together in our rpm. 
+
+To do that it needs to be a standard python package (setup.py, bin folder)
 with at least one external dependency (I've choose `requests` for this demo).
 
 Getting Started
@@ -42,7 +51,8 @@ make rpm
 
 # Consumer
 
-The container `consumer` is an target environment example. A simple centos7 with python 3.5.2 to demonstrate how simple is to install our rpm and execute our script `stupidbin`.
+The container `consumer` is an target environment example. 
+A simple centos7 with python 3.5.2 to demonstrate how simple is to install our rpm and execute our script `stupidbin`.
 
 ## Running Consumer
 
