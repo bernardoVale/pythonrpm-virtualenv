@@ -1,0 +1,29 @@
+{
+    "extensions": {
+        "enabled": [
+            "python_venv",
+            "blocks"
+        ]
+    },
+    "core": {
+        "group": "Application/System",
+        "license": "MIT",
+        "name": "stupidbin",
+        "summary": "Stupid Bin",
+        "version": "0.1"
+    },
+    "python_venv": {
+        "cmd": "virtualenv",
+        "name": "stupidbin",
+        "flags": [],
+        "path": "/usr/share/python",
+        "python": "/usr/local/bin/python3.5",
+        "requirements": ["requirements.txt"],
+        "strip_binaries": false
+    },
+    "blocks": {
+        "desc": [
+            "This is really dumb"
+        ]
+    }
+}
