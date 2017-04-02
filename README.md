@@ -64,8 +64,7 @@ make consumer
 
 Start the container and install the rpm:
 ```
-docker run -it --rm -v $PWD:/tmp/rpm centos35 bash
-cd /tmp/rpm
+docker run -it -w /tmp/rpm --rm -v $PWD:/tmp/rpm centos35 bash
 rpm -ivh stupidbin-0.1-1.x86_64.rpm
 ```
 
