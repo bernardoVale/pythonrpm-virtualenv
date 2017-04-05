@@ -15,6 +15,9 @@ With this approach the resulting `rpm` will be strict dependent to the build env
 
 If we build inside a CentOS 6 with Python 3.5 the only machines able to install it will be exactly CentOS6 with Python 3.5.
 
+Actually, it might work on a CentOS 7 or a RHEL 7 as long as they share the same `glibc` version of the machine that built the rpm.
+
+
 Also, the package is still a `virtualenv`. To use it we need to activate the virtualenv, but hey, 
 this is not an issue, this is great because we're installing things in a non intrusive way.
 

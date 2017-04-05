@@ -1,0 +1,3 @@
+#!/bin/bash
+source /usr/share/stupidbin/bin/activate
+/usr/share/stupidbin/bin/stupidbin $@

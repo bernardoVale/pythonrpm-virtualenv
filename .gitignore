@@ -1,4 +1,5 @@
 *.rpm
 *.tgz
+*.tar.xz
 .idea
 *.pyc

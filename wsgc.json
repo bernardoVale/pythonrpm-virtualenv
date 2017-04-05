@@ -1,0 +1,46 @@
+{
+    "extensions": {
+        "enabled": [
+            "python_venv",
+            "blocks",
+            "file_extras",
+            "file_permissions"
+        ]
+    },
+    "core": {
+        "group": "Application/System",
+        "license": "MIT",
+        "name": "wsgc-stupidbin",
+        "summary": "Stupid Bin",
+        "version": "0.1",
+        "release": "el7"
+    },
+    "python_venv": {
+        "cmd": "virtualenv",
+        "name": "stupidbin",
+        "flags": [],
+        "path": "/usr/share",
+        "python": "/apps/python-3.5.3/bin/python3",
+        "requirements": ["requirements.txt"],
+        "strip_binaries": false
+    },
+    "file_extras": {
+        "files": [
+            {
+                "src": "scripts/stupidbin",
+                "dest": "/usr/local/bin/stupidbin"
+            }
+        ]
+    },
+    "file_permissions": {
+        "user": "root",
+        "group": "root",
+        "create_user": false,
+        "create_group": false
+    },
+    "blocks": {
+        "desc": [
+            "This is really dumb"
+        ]
+    }
+}
